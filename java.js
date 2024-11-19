@@ -16,19 +16,44 @@ tipButtons.forEach(button => {
         customInput.classList.remove('custom-input');
         tipButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
+        customInput.value = '';
         tipPercentage = parseFloat(button.getAttribute('data-tip'));
         calculateTip();
     });
 });
 
-customInput.addEventListener('click', () => {
+customInput.addEventListener('input', () => {
     tipButtons.forEach(btn => btn.classList.remove('active'));
     customInput.classList.add('custom-input');
+    tipPercentage = parseFloat(customInput.value);
+
+    if (tipPercentage === 0) {
+        document.querySelector('.tip-error-message').innerHTML = `Can't be zero`;
+        people.classList.add('bill-input');
+    } else if (tipPercentage < 0) {
+        document.querySelector('.tip-error-message').innerHTML = 'Enter a number greater than 0';
+        people.classList.add('bill-input');
+    } else {
+        document.querySelector('.tip-error-message').innerHTML = '';
+        people.classList.remove('bill-input')
+    }
     calculateTip();
 });
 
 billInput.addEventListener('input', () => {
     bill = parseFloat(billInput.value);
+
+    if (bill === 0) {
+        document.querySelector('.bill-error-message').innerHTML = `Can't be zero`;
+        people.classList.add('bill-input');
+    } else if (bill < 0) {
+        document.querySelector('.bill-error-message').innerHTML = 'Enter a number greater than 0';
+        people.classList.add('bill-input');
+    } else {
+        document.querySelector('.bill-error-message').innerHTML = '';
+        people.classList.remove('bill-input')
+    }
+
     calculateTip();
 });
 people.addEventListener('input', () => {
