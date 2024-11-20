@@ -11,45 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let bill = 0;
     let numberOfPeople = 0;
 
-    tipButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            customInput.classList.remove('custom-input');
-            tipButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            customInput.value = '';
-            tipPercentage = parseFloat(button.getAttribute('data-tip'));
-            calculateTip();
-        });
-    });
-
-    customInput.addEventListener('click', () => {
-        tipButtons.forEach(btn => btn.classList.remove('active')); 
-    })
-
-    customInput.addEventListener('input', () => {
-        customInput.classList.add('custom-input');
-
-        if (customInput.value.startsWith('0') && customInput.value.length > 1 && customInput.value[1] !== '.') {
-            customInput.value = customInput.value.slice(1);
-        }
-
-        tipPercentage = parseFloat(customInput.value);
-
-        if (tipPercentage === 0) {
-            document.querySelector('.tip-error-message').innerHTML = `Can't be zero`;
-            customInput.classList.add('tip-input');
-        } else if (tipPercentage < 0) {
-            document.querySelector('.tip-error-message').innerHTML = 'Not a valid number';
-            customInput.classList.add('tip-input');
-        } else {
-            document.querySelector('.tip-error-message').innerHTML = '';
-            customInput.classList.remove('tip-input')
-        }
-        calculateTip();
-    });
-
     billInput.addEventListener('input', () => {
-        if (billInput.value.startsWith('0') && billInput.value.length > 1) {
+        if (billInput.value.startsWith('0') && billInput.value.length > 1 && billInput.value[1] !== '.') {
             billInput.value = billInput.value.slice(1);
         }
 
@@ -94,6 +57,43 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === '.') {
             event.preventDefault();
         }
+    });
+
+    tipButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            customInput.classList.remove('custom-input');
+            tipButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            customInput.value = '';
+            tipPercentage = parseFloat(button.getAttribute('data-tip'));
+            calculateTip();
+        });
+    });
+
+    customInput.addEventListener('click', () => {
+        tipButtons.forEach(btn => btn.classList.remove('active')); 
+    })
+
+    customInput.addEventListener('input', () => {
+        customInput.classList.add('custom-input');
+
+        if (customInput.value.startsWith('0') && customInput.value.length > 1 && customInput.value[1] !== '.') {
+            customInput.value = customInput.value.slice(1);
+        }
+
+        tipPercentage = parseFloat(customInput.value);
+
+        if (tipPercentage === 0) {
+            document.querySelector('.tip-error-message').innerHTML = `Can't be zero`;
+            customInput.classList.add('tip-input');
+        } else if (tipPercentage < 0) {
+            document.querySelector('.tip-error-message').innerHTML = 'Not a valid number';
+            customInput.classList.add('tip-input');
+        } else {
+            document.querySelector('.tip-error-message').innerHTML = '';
+            customInput.classList.remove('tip-input')
+        }
+        calculateTip();
     });
 
     function calculateTip() {
