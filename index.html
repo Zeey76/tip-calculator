@@ -22,15 +22,16 @@
 
       <div class="bill">
         <div class="label-wrapper">
-          <label>Bill</label> 
+          <label for="bill-input">Bill</label> 
           <p class="bill-error-message"></p>
         </div>
         <div class="input-wrapper">
           <span><img src="./images/icon-dollar.svg"></span>
-          <input type="number" placeholder="0" class="bill-value">
+          <input type="number" placeholder="0" class="bill-value" id="bill-input" name="bill">
         </div>
+
         <div class="label-wrapper tip-label-wrapper">
-          <label class="select-tip">Select Tip %</label>
+          <label class="select-tip" for="custom-tip">Select Tip %</label>
           <p class="tip-error-message"></p>
         </div>
         <div class="tip-buttons">        
@@ -39,18 +40,19 @@
           <button class="tip-btn" data-tip="15">15%</button>
           <button class="tip-btn" data-tip="25">25%</button>
           <button class="tip-btn" data-tip="50">50%</button>
-          <input class="custom" placeholder="Custom" type="number">
+          <input class="custom" placeholder="Custom" type="number" id="custom-tip" name="tip">
         </div>
 
         <div class="label-wrapper">
-          <label>Number of People</label> 
+          <label for="people-input">Number of People</label> 
           <p class="error-message"></p>
         </div>
         <div class="input-wrapper">
           <span><img src="./images/icon-person.svg"></span>
-          <input type="number" placeholder="0" class="people">
+          <input type="number" placeholder="0" class="people" id="people-input" name="people">
         </div>
       </div>
+
       <div class="price">
         <div class="tip-amount">
           <div>
@@ -71,6 +73,7 @@
         <button class="reset">Reset</button>
       </div>
     </div>
+
     <div class="attribution">
       <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
       <p>Coded by <a href="https://github.com/Zeey76/tip-calculator">Zainab</a>.</p>

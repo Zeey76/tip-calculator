@@ -37,6 +37,12 @@ h2 {
     border-radius: 1.2rem;
 }
 
+.label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 label {
     display: block;
     margin-bottom: 0.35rem;
@@ -51,16 +57,24 @@ input {
     background-color: hsl(189, 41%, 97%);
     padding: 0.3rem;
     width: 100%;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper > span {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 input:focus {
     outline: none;
     border-color: hsl(172, 67%, 45%);
-}
-
-input:not(.reset, .custom) {
-    font-size: 1.5rem;
-    text-align: right;
 }
 
 .tip-label-wrapper {
@@ -93,30 +107,26 @@ button, .custom {
     color: hsl(183, 100%, 15%);
 }
 
-.active {
+.custom-input {
+    border-color: hsl(172, 67%, 45%);
+}
+
+.people-input, .bill-input, .tip-input {
+    border: 1.5px solid red;
+}
+
+.people-input:focus, .bill-input:focus, .tip-input:focus {
+    border: 1.5px solid red;
+}
+
+.error-message, .bill-error-message, .tip-error-message {
+    font-size: 0.7rem;
+    color: red;
+}
+
+button.active {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
-}
-
-
-.input-wrapper {
-    position: relative;
-}
-
-.input-wrapper > span {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.label-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.people-input:focus, .bill-input:focus {
-    border: 1.5px solid red;
 }
 
 .price {
@@ -138,10 +148,13 @@ button, .custom {
 .tip, .total {
     color: hsl(0, 0%, 100%);
     margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
 .person {
     color: hsl(184, 14%, 56%);
+    font-size: 0.75rem;
 }
 
 .total-price, .tip-price {
@@ -162,6 +175,7 @@ button, .custom {
     background-color: hsl(172, 67%, 45%);
     cursor: pointer;
 }
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
@@ -169,20 +183,6 @@ button, .custom {
 
 .attribution a { 
     color: hsl(228, 45%, 44%);
-}
-
-.error-message, .bill-error-message, .tip-error-message {
-    font-size: 0.8rem;
-    color: red;
-}
-
-.person {
-    font-size: 0.75rem;
-}
-
-.tip, .total {
-    font-size: 0.85rem;
-    font-weight: 700;
 }
 
 @media (min-width: 45rem) {
