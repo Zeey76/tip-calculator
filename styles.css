@@ -63,6 +63,7 @@ input {
 
 .input-wrapper {
     position: relative;
+    margin-bottom: 1.6rem;
 }
 
 .input-wrapper > span {
@@ -86,7 +87,7 @@ input:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.7rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.75rem;
 }
 
 button, .custom {
