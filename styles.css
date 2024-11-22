@@ -30,7 +30,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 1.7rem;
     background-color: hsl(0, 0%, 100%);
     min-width: 20rem;
     max-width: 40rem;
@@ -98,7 +98,7 @@ button, .custom {
     background-color: hsl(183, 100%, 15%);
     color: hsl(0, 0%, 100%);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.15rem;
 }
 
 .custom {
@@ -133,7 +133,7 @@ button.active {
 .price {
     background-color: hsl(183, 100%, 15%);
     border-radius: 0.7rem;
-    padding: 1.5rem;
+    padding: 1.7rem;
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -200,7 +200,7 @@ button.active {
     }
 
     button {
-        width: 6rem;
+        width: 6.5rem;
     }
 
     .reset {
