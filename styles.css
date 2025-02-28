@@ -1,209 +1,219 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: hsl(185, 41%, 84%);
-    font-family: 'Space Mono';
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono";
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
-    display: flex;
-    flex-direction: column;
-    color: hsl(183, 100%, 15%);
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
 }
 
 .calculator {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.7rem;
-    background-color: hsl(0, 0%, 100%);
-    min-width: 20rem;
-    max-width: 35rem;
-    border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.7rem;
+  background-color: hsl(0, 0%, 100%);
+  min-width: 20rem;
+  max-width: 35rem;
+  border-radius: 1.2rem;
 }
 
 .label-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 label {
-    display: block;
-    margin-bottom: 0.35rem;
-    color: hsl(183, 100%, 15%);
-    font-size: 0.8rem;
-    font-weight: 500;
+  display: block;
+  margin-bottom: 0.35rem;
+  color: hsl(183, 100%, 15%);
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 input {
-    border-radius: 0.2rem;
-    border: 1.5px solid transparent;
-    background-color: hsl(189, 41%, 97%);
-    padding: 0.3rem;
-    width: 100%;
-    font-size: 1.5rem;
-    text-align: right;
+  border-radius: 0.2rem;
+  border: 1.5px solid transparent;
+  background-color: hsl(189, 41%, 97%);
+  padding: 0.3rem;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: right;
 }
 
 .input-wrapper {
-    position: relative;
-    margin-bottom: 1.6rem;
+  position: relative;
+  margin-bottom: 1.6rem;
 }
 
 .input-wrapper > span {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 input:focus {
-    outline: none;
-    border-color: hsl(172, 67%, 45%);
+  outline: none;
+  border-color: hsl(172, 67%, 45%);
 }
 
 .tip-label-wrapper {
-    margin-top: 1.6rem;
-    margin-bottom: 0.7rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.7rem;
 }
 
 .tip-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
-    margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 1.75rem;
 }
 
-button, .custom {
-    width: 100%;
-    padding: 0.7rem;
-    border: 1.5px solid transparent;
-    border-radius: 0.2rem;
-    background-color: hsl(183, 100%, 15%);
-    color: hsl(0, 0%, 100%);
-    cursor: pointer;
-    font-size: 1rem;
+button,
+.custom {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1.5px solid transparent;
+  border-radius: 0.2rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .custom {
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 15%);
-    text-align: right;
-    color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
 }
 
 .custom-input {
-    border-color: hsl(172, 67%, 45%);
+  border-color: hsl(172, 67%, 45%);
 }
 
-.people-input, .bill-input, .tip-input {
-    border: 1.5px solid red;
+.people-input,
+.bill-input,
+.tip-input {
+  border: 1.5px solid red;
 }
 
-.people-input:focus, .bill-input:focus, .tip-input:focus {
-    border: 1.5px solid red;
+.people-input:focus,
+.bill-input:focus,
+.tip-input:focus {
+  border: 1.5px solid red;
 }
 
-.error-message, .bill-error-message, .tip-error-message {
-    font-size: 0.7rem;
-    color: red;
+.error-message,
+.bill-error-message,
+.tip-error-message {
+  font-size: 0.7rem;
+  color: red;
 }
 
 button.active {
-    background-color: hsl(172, 67%, 45%);
-    color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
 
 .price {
-    background-color: hsl(183, 100%, 15%);
-    border-radius: 0.7rem;
-    padding: 1.7rem;
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.7rem;
+  padding: 1.7rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.tip-amount, .total-per-person {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
+.tip-amount,
+.total-per-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
-.tip, .total {
-    color: hsl(0, 0%, 100%);
-    margin-bottom: 0.2rem;
-    font-size: 0.85rem;
-    font-weight: 700;
+.tip,
+.total {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .person {
-    color: hsl(184, 14%, 56%);
-    font-size: 0.75rem;
+  color: hsl(184, 14%, 56%);
+  font-size: 0.75rem;
 }
 
-.total-price, .tip-price {
-    color: hsl(172, 67%, 45%);
-    font-size: 1.7rem;
-    font-weight: 700;
+.total-price,
+.tip-price {
+  color: hsl(172, 67%, 45%);
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
 .reset {
-    background-color: hsl(184, 57%, 32%);
-    color: hsl(183, 100%, 15%);
-    text-transform: uppercase;
-    padding: 0.8rem;
-    width: 100%;
+  background-color: hsl(184, 57%, 32%);
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  padding: 0.8rem;
+  width: 100%;
 }
 
 .active-reset {
-    background-color: hsl(172, 67%, 45%);
-    cursor: pointer;
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-} 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
 
-.attribution a { 
-    color: hsl(228, 45%, 44%);
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media (min-width: 50rem) {
-    .calculator {
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: 1fr 1fr;
-        min-width: 47rem;
-        max-width: 50rem;
-    }
+  .calculator {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    min-width: 47rem;
+    max-width: 50rem;
+  }
 
-    .tip-buttons {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  .tip-buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-    button {
-        width: 6.5rem;
-    }
+  button {
+    width: 6.5rem;
+  }
 
-    .reset {
-        margin-top: auto;
-    }
+  .reset {
+    margin-top: auto;
+  }
 }
